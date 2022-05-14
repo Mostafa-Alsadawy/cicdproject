@@ -1,0 +1,17 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "this project for udacity ",
+  "repository": "git@github.com:Mostafa-Alsadawy/cicdproject.git",
+  "author": "Mostafa-Alsadawy <mostafa.alsadawy2021@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "install:api":"cd ./storeapi && yarn install",
+    "install:front": "cd ./storefrontend && yarn install",
+    "test:api":"cd ./storeapi && yarn test",
+    "build:api": "cd ./storeapi && yarn build",
+    "build:fornt": "cd ./storefrontend && yarn build"
+  }
+}
+
+
