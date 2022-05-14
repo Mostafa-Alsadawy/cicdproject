@@ -47,7 +47,6 @@ describe("Test functionality of all CRUD opreation for orde Model",()=>{
   it("create new order",async():Promise<void>=>{
     const orderCountBefore = (await orderModel.index()).length
     const newOrder = await orderModel.create(order);
-    console.log(newOrder);
     const orderCountAfter = (await orderModel.index()).length
     order.id = newOrder.id;
     expect(newOrder.isopen).toEqual(order.isopen);
