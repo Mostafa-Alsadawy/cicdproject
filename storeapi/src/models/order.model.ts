@@ -1,5 +1,4 @@
 import client from "../database";
-
 // declare order type to make development easier.
 export type Order = {
   id?: number;
