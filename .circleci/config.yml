@@ -3,7 +3,7 @@ orbs:
     node: circleci/node@5.0.2
 
 jobs:
-    all:
+    one:
         docker:
             - image: "cimg/base:stable"
             - image: "cimg/postgres:14.0"
@@ -23,7 +23,7 @@ jobs:
                 name: test api
                 command: yarn test:api
 
-# workflow:
-#     install-build-test-deploy:
-#         jobs:
-#             - all
+workflows:
+  one_and_two: # this is the name of our workflow
+    jobs: # and here we list the jobs we are going to run.
+      - one
