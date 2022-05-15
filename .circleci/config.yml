@@ -23,7 +23,7 @@ jobs:
                 name: test api
                 command: yarn test:api
 
-workflow:
-    install-build-test-deploy:
-        jobs:
-            - all
+# workflow:
+#     install-build-test-deploy:
+#         jobs:
+#             - all
