@@ -5,7 +5,7 @@ orbs:
 jobs:
     one:
         docker:
-            - image: "cimg/base:stable"
+            # - image: "cimg/base:stable"
             - image: "cimg/postgres:14.0"
 
         steps:
