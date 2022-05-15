@@ -1,7 +1,29 @@
-version: 2.1
+version: "2.1"
 orbs:
-    hello: circleci/hello-build@0.0.5
-workflows:
-    "Hello Workflow":
+    node: circleci/node@5.0.2
+
+jobs:
+    all:
+        docker:
+            - image: "cimg/base:stable"
+            - image: "cimg/postgres:14.0"
+
+        steps:
+            - checkout
+            - node/install:
+                install-yarn: true
+                node-version: "16.13"
+            - run:
+                name: install dependancy
+                command: yarn install
+            - run:
+                name: build project
+                command: yarn build
+            - run:
+                name: test api
+                command: yarn test:api
+
+workflow:
+    install-build-test-deploy:
         jobs:
-          - hello/hello-build
+            - all
