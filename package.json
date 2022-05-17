@@ -10,6 +10,7 @@
     "install:front": "cd ./storefrontend && yarn install",
     "install": "yarn install:api && yarn install:front",
     "test:api":"cd ./storeapi && yarn test",
+    "test:front":"cd ./storefrontend && yarn test",
     "build:api": "cd ./storeapi && yarn build",
     "build:front": "cd ./storefrontend && yarn build",
     "build":"yarn build:api && yarn build:front"
