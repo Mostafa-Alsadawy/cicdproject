@@ -21,7 +21,7 @@ jobs:
                 command: yarn build
             - run:
                 name: test api
-                command: yarn test:api
+                command: yarn test:front
 
 workflows:
   one_and_two: # this is the name of our workflow
