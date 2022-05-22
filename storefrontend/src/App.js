@@ -21,6 +21,7 @@ function App() {
           className="App-link"
           href="http://storeapi-dev.eba-gy9p3gc8.us-east-1.elasticbeanstalk.com"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Acess API
         </a>
