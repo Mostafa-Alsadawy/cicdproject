@@ -55,7 +55,7 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service offering 
     and this is overview image for S3 bucket :
     ![S3 overview](../images/S3_overview.png)
 
-## 2.Circle CI:
+## 2.Circle CI ![circle ci](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white) :
 
 we used Circle CI as platform for continuse integration
 

@@ -1,5 +1,5 @@
 # OVERVIEW :
-this project is a proff of concept for CI - CD where I used [Circle ci](www.circleci.com) for continouse integration **CI**.
+this project is a proff of concept for CI - CD where I used [Circle ci](www.circleci.com) ![circle ci](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white) for continouse integration **CI**.
 And used AWS as Cloud Host provider to compelet the seconde phase continous deploment.
 
 this project id a part of Udacity nanodgree and is required for graduation.

@@ -66,7 +66,7 @@ use command : yarn deploy
 | TOKEN_SECRET| for JWT authentication | yes | any string  |
 
 
-## perpare AWS 
+## perpare AWS ![Aws](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 
 - this project uses AWS for deploying so you need to get credintaionals with the correct permisions for :
     * Adminstration of Elastic beanstalk.

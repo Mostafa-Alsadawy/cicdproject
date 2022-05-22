@@ -1,6 +1,6 @@
 # PIPLINE :
 ## provider :
-Circle ci 
+Circle ci ![circle ci](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white)
 
 ## Diagram :
 ![pipline diagram](../images/Pipline_diagram.png)
@@ -8,7 +8,7 @@ Circle ci
 
 ## Pre-steps :
 
-- this project uses enviromental variables so make sure to add these varablies on the Enviromintal Variables section under Settings of your project at Circle Ci
+- this project uses enviromental variables so make sure to add these varablies on the Enviromintal Variables section under Settings of your project at Circle Ci ![circle ci](https://img.shields.io/badge/circleci-343434?style=for-the-badge&logo=circleci&logoColor=white)
 
 as displayed on this image :
 ![env vars](../images/CI_env.png)
