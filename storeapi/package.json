@@ -2,14 +2,18 @@
   "name": "storefront_backend",
   "version": "0.1.0",
   "description": "",
-  "main": "server.ts",
+ 
+  "main": "server.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "yarn run build && node dist/server.js",
+    "build": "npx tsc ",
+    "start": "node ./server.js",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./dist --onSuccess \"node ./dist/server.js\"",
     "jasmine": "jasmine",
     "test": "export NODE_ENV=test && db-migrate up --env test  && jasmine && db-migrate --env test reset",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "clean": "rm -rf www/ || true",
+    "zip": "npm run clean && npm run build && cp -rf ./dist/ ./www/ &&  cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
+    "deploy": "chmod +x ./bin/deploy.sh && ./bin/deploy.sh"
   },
   "author": "Udacity",
   "license": "ISC",

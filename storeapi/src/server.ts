@@ -7,12 +7,17 @@ import { orderProductsServiceRouts } from "./handlers/orderProductsService.handl
 
 
 export const app: express.Application = express();
-export const port: number = 3000;
+export const port: number = parseInt(process.env.PORT as string)|| 8080;
+
+app.listen(port, function (): void {
+  console.log("server is running on port " + port);
+});
+
 
 app.use(bodyParser.json());
 
 app.get("/",async function (req: Request, res: Response) {
-  res.json("welcom to store api start by creating new user");
+  res.json("welcom to store api start by creating new user new added");
 });
 
 usersRoutes(app);
@@ -20,9 +25,6 @@ productsRouts(app);
 ordersRouts(app);
 orderProductsServiceRouts(app);
 
-app.listen(3000, function (): void {
-  console.log("server is running on port " + port);
-});
 
 
 app.use(
