@@ -1,12 +1,13 @@
 version: "2.1"
 orbs:
     node: circleci/node@5.0.2
+    aws-cli: circleci/aws-cli@3.1.1
+    eb: circleci/aws-elastic-beanstalk@2.0.1
 
 jobs:
     one:
         docker:
-            # - image: "cimg/base:stable"
-            - image: "cimg/postgres:14.0"
+             - image: "cimg/base:stable"
 
         steps:
             - checkout
@@ -16,14 +17,20 @@ jobs:
             - run:
                 name: install dependancy
                 command: yarn install
+            - aws-cli/setup
+            - eb/setup
             - run:
                 name: build project
                 command: yarn build
             - run:
-                name: test api
+                name: test frontend
                 command: yarn test:front
+            - run:
+                name: deploy project
+                command: yarn deploy
+            
 
 workflows:
-  one_and_two: # this is the name of our workflow
-    jobs: # and here we list the jobs we are going to run.
+  all_in_one: 
+    jobs: 
       - one
