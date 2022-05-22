@@ -1,24 +1,28 @@
 version: "2.1"
+# used already made config files to save time and avoid errors
 orbs:
     node: circleci/node@5.0.2
     aws-cli: circleci/aws-cli@3.1.1
     eb: circleci/aws-elastic-beanstalk@2.0.1
 
+# one job does everything in this small project
 jobs:
     one:
         docker:
              - image: "cimg/base:stable"
 
         steps:
-            - checkout
-            - node/install:
+            - checkout # chackout code for changes
+            - node/install: # using install command for node orbs
                 install-yarn: true
                 node-version: "16.13"
+            # Install all dependacies
             - run:
                 name: install dependancy
                 command: yarn install
-            - aws-cli/setup
-            - eb/setup
+                # using setup command from aws-cli and eb orbs Requrie adding your creditenals on envirominat variables
+            - aws-cli/setup 
+            - eb/setup 
             - run:
                 name: build project
                 command: yarn build
@@ -31,6 +35,6 @@ jobs:
             
 
 workflows:
-  all_in_one: 
-    jobs: 
+  all_in_one: # work flow name
+    jobs: # jobs to run
       - one

@@ -17,6 +17,13 @@ function App() {
         >
           learn react
         </a>
+        <a
+          className="App-link"
+          href="http://storeapi-dev.eba-gy9p3gc8.us-east-1.elasticbeanstalk.com"
+          target="_blank"
+        >
+          Acess API
+        </a>
       </header>
     </div>
   );
