@@ -3,6 +3,7 @@ import express, { NextFunction } from "express";
 import {check, body, validationResult } from "express-validator";
 import jwt from "jsonwebtoken";
 import verifyAuthToken from "../middlewares/verify_auth_token";
+import { config } from "../config/config";
 
 const userModel = new UserModel();
 
@@ -74,7 +75,7 @@ export const usersRoutes = (app: express.Application): void => {
       try {
         const result = await userModel.create(req.body);
         if (result) {
-          const token = jwt.sign(result, process.env.TOKEN_SECRET as string);
+          const token = jwt.sign(result, config.tokenseceret as string);
           res.json({
             status: "success",
             massage: "created user with token",
@@ -164,7 +165,7 @@ export const usersRoutes = (app: express.Application): void => {
         const passwd = req.body.passwd as string;
         const result = await userModel.authenticate(id,passwd);
         if (result) {
-          const token = jwt.sign(result, process.env.TOKEN_SECRET as string);
+          const token = jwt.sign(result, config.tokenseceret as string);
           res.json({
             status: "success",
             massage: "done authenticate user with token",

@@ -5,6 +5,7 @@ const client = new Pool({
     host:config.host,
     user:config.user,
     password:config.password,
+    port:config.db_port,
     database:(config.env == "dev"? config.database : config.database_test)
 })
 

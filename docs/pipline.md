@@ -2,6 +2,10 @@
 ## provider :
 Circle ci 
 
+## Diagram :
+![pipline diagram](../images/Pipline_diagram.png)
+
+
 ## Pre-steps :
 
 - this project uses enviromental variables so make sure to add these varablies on the Enviromintal Variables section under Settings of your project at Circle Ci

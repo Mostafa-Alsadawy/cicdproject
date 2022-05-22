@@ -4,10 +4,11 @@ import {usersRoutes} from "./handlers/user.handler";
 import {ordersRouts} from "./handlers/order.handler";
 import {productsRouts} from "./handlers/product.handler";
 import { orderProductsServiceRouts } from "./handlers/orderProductsService.handler";
+import { config } from "./config/config";
 
 
 export const app: express.Application = express();
-export const port: number = parseInt(process.env.PORT as string)|| 8080;
+export const port: number = config.port;
 
 app.listen(port, function (): void {
   console.log("server is running on port " + port);
