@@ -52,16 +52,7 @@ like this image :
 
 
 ### Enviourmental variables :
-NODE_ENV=dev
-HOST=database-1.cc5q73rknskb.us-east-1.rds.amazonaws.com
-DB_PORT=5432
-DATABASE=postgres
-DATABASE_TEST=store_test
-DB_USER=postgres
-PASSWORD=Aa123456
-PEPPER=secretpass
-SALT_ROUNDs=12
-TOKEN_SECRET=topsecret
+
 
 | Varable Name   |      description        | requried| should be|
 |----------------|:-----------------------:|:----:|:----:|
